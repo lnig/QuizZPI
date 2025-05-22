@@ -10,15 +10,15 @@
     "id": "2",
     "type": "single",
     "question": "Skrót CPM oznacza",
-    "options": ["Cri0cal Project Management", "Custom Path Method", "CriHcal Path Method", "Con0nous Project Management"],
-    "correctAnswer": ""
+    "options": ["Critical Project Management", "Custom Path Method", "Critical Path Method", "Continous Project Management"],
+    "correctAnswer": "Critical Path Method"
   },
   {
     "id": "3",
     "type": "single",
     "question": "PRINCE2 był podstawową metodyką zarządzania projektów rządowych w:",
     "options": ["USA", "Japonii", "Wielkiej Brytanii", "Nie był w żadnym kraju"],
-    "correctAnswer": ""
+    "correctAnswer": "Wielkiej Brytanii"
   },
   {
     "id": "4",
@@ -31,7 +31,7 @@
     "type": "single",
     "question": "PMI - Project Management Institute, powstał w:",
     "options": ["Francji", "Wielkiej Brytanii", "USA", "Nie określono kraju powstania"],
-    "correctAnswer": ""
+    "correctAnswer": "USA"
   },
   {
     "id": "6",
@@ -56,14 +56,14 @@
       "zadania nie mogą zostać zmienione przez cały czas trwania projektu",
       "zadania powinny być zgodne z założonymi wymaganiami"
     ],
-    "correctAnswer": ""
+    "correctAnswer": "zadania nie mogą zostać zmienione przez cały czas trwania projektu"
   },
   {
     "id": "9",
     "type": "single",
     "question": "Kto stworzył, używane do dzisiaj, schematy/diagramy przydatne przy zarządzaniu projektami?",
-    "options": ["Frederick Taylor", "Ferdynand Thompson", "Henry Gane", "Hector Grant"],
-    "correctAnswer": ""
+    "options": ["Frederick Taylor", "Ferdynand Thompson", "Henry Gantt", "Hector Grant"],
+    "correctAnswer": "Henry Gantt"
   },
   {
     "id": "10",
@@ -75,13 +75,18 @@
       "Korzyść którą firma generuje dla swoich akcjonariuszy",
       "W zasadzie nie wiadomo - to jakieś wymysły!"
     ],
-    "correctAnswer": ""
+    "correctAnswer": "Korzyść którą firma generuje dla swoich akcjonariuszy"
   },
   {
     "id": "11",
-    "type": "open",
+    "type": "matching",
     "question": "W której ćwiartce obrazu projektu znajduje się APM?",
-    "correctAnswers": ["cel niejasny - Rozwiązanie jasne"]
+    "leftItems": ["cel niejasny", "cel jasny"],
+    "rightItems": ["Rozwiązanie jasne", "Rozwiązanie niejasne"],
+    "correctMap": {
+      "cel niejasny": "Rozwiązanie jasne",
+      "cel jasny": "Rozwiązanie niejasne"
+    }
   },
   {
     "id": "12",
@@ -142,7 +147,7 @@
       "Versatility, Unsureness, Complexity, Ambiguity",
       "Verbosity, Uncertainty, Complexity, Ambiguity"
     ],
-    "correctAnswer": ""
+    "correctAnswer": "Volatility, Uncertainty, Complexity, Ambiguity"
   },
   {
     "id": "17",
@@ -154,7 +159,7 @@
       "Czas, koszt, dostępność zasobów",
       "Czas, jakość, zakres"
     ],
-    "correctAnswer": ""
+    "correctAnswer": "Czas, koszt, dostępność zasobów"
   },
   {
     "id": "18",
@@ -178,28 +183,22 @@
     "id": "19",
     "type": "single",
     "question": "Która grupa procesów trwa zwykle najdłużej?",
-    "options": [
-      "planowanie",
-      "monitorowanie i kontrola",
-      "zamykanie",
-      "zakres",
-      "rozpoczynanie"
-    ],
-    "correctAnswer": ""
+    "options": ["planowanie", "monitorowanie i kontrola", "zamykanie", "zakres", "rozpoczynanie"],
+    "correctAnswer": "monitorowanie i kontrola"
   },
   {
     "id": "20",
     "type": "single",
     "question": "Na którym etapie odpowiadamy na pytanie: \"Jaki problem biznesowy ma rozwiązać ten projekt?\"",
     "options": ["zakres", "zamykanie", "monitorowanie i kontrola", "rozpoczynanie", "planowanie"],
-    "correctAnswer": ""
+    "correctAnswer": "zakres"
   },
   {
     "id": "21",
     "type": "single",
     "question": "Na którym etapie jest \"identyfikowanie i rozwiązywanie problemów\"?",
     "options": ["planowanie", "rozpoczynanie", "zakres", "monitorowanie i kontrola", "zamykanie"],
-    "correctAnswer": ""
+    "correctAnswer": "monitorowanie i kontrola"
   },
   {
     "id": "22",
@@ -219,7 +218,7 @@
       "kto konkretnie będzie pracował nad projektem?",
       "co będzie trzeba robić?"
     ],
-    "correctAnswers": []
+    "correctAnswers": ["jak będziemy się komunikować w trakcie projektu?", "kto konkretnie będzie pracował nad projektem?"]
   },
   {
     "id": "24",
@@ -232,7 +231,7 @@
       "rekrutacja menedżera projektu",
       "tworzenie dokumentacji potrzeb klienta"
     ],
-    "correctAnswers": ["rekrutacja menedżera projektu"]
+    "correctAnswers": ["wyznaczanie kolejności podejmowania działań"]
   },
   {
     "id": "25",
@@ -248,7 +247,7 @@
   },
   {
     "id": "26",
-    "type": "multiple",
+    "type": "single",
     "question": "Jakiego typu wymagań nie omawialiśmy na wykładzie?",
     "options": [
       "Wymagania funkcjonalne",
@@ -257,7 +256,7 @@
       "Ograniczenia projektowe",
       "Wymaganie nierzeczywiste"
     ],
-    "correctAnswers": ["Wymagania globalne", "Wymaganie nierzeczywiste"]
+    "correctAnswers": ["Wymaganie nierzeczywiste"]
   },
   {
     "id": "27",
@@ -279,13 +278,21 @@
     "id": "28",
     "type": "ordering",
     "question": "Cele S.M.A.R.T - ustaw w kolejności",
-    "options": [
-      "Specific – Konkretne",
-      "Measurable - Mierzalne",
-      "Assignable - Przypisywalne",
-      "Realistic - Realistyczne",
-      "TimeRelated – Określane czasowo"
-    ]
+    "leftItems": ["Specific", "Measurable", "Assignable", "Realistic", "TimeRelated"],
+    "rightItems": [
+      "Konkretne",
+      "Mierzalne",
+      "Przypisywalne",
+      "Realistyczne",
+      "Określane czasowo"
+    ],
+    "correctMap": {
+      "Specific": "Konkretne",
+      "Measurable": "Mierzalne",
+      "Assignable": "Przypisywalne",
+      "Realistic": "Realistyczne",
+      "TimeRelated": "Określane czasowo"
+    }
   },
   {
     "id": "29",
@@ -300,8 +307,7 @@
     ],
     "correctAnswers": [
       "Co trzeba będzie zrobić?",
-      "Skąd wiadomo że zostało to zrobione?",
-      "Kto będzie tworzył funkcjonalności?"
+      "Skąd wiadomo że zostało to zrobione?"
     ]
   },
   {
@@ -325,7 +331,7 @@
   },
   {
     "id": "33",
-    "type": "multiple",
+    "type": "single",
     "question": "Planowanie odpowiada na pytanie:",
     "options": [
       "Co trzeba będzie zrobić?",
@@ -334,7 +340,7 @@
       "Dlaczego to robimy?",
       "Jak sprawdzamy że jest to robione?"
     ],
-    "correctAnswers": ["Co trzeba będzie zrobić?", "Jak to zrobimy?"]
+    "correctAnswers": ["Jak to zrobimy?"]
   },
   {
     "id": "34",
@@ -345,19 +351,19 @@
   {
     "id": "35",
     "type": "multiple",
-    "question": "Rezerwa menedżerska - zaznacz prawdziwe:",
+    "question": "Rezerwa menedżerska. Zaznacz wszystkie prawdzie odpowiedzi (tylko prawdziwe).",
     "options": [
       "Rezerwa służy klientowi do zlecania zadań członkom zespołu z pominięciem menedżera",
       "Zapas czasu na wypadek nieplanowanych zdarzeń",
       "Waha się w granicach 5%-10% całkowitego czasu trwania wszystkich działań projektowych",
-      "Można wpisać rezerwę jako pierwsze zadanie do wykonania",
-      "Wpisywana w harmonogram jako fikcyjne działanie ostatnie",
+      "Można wpisać rezerwę jako pierwsze zadanie do wykonania w projekcie",
+      "Wpisywana w harmonogram jako fikcyjne działanie ostatnie do wykonania w projekcie",
       "Zwykle rezerwę ujawnia się zespołowi projektowemu"
     ],
     "correctAnswers": [
       "Zapas czasu na wypadek nieplanowanych zdarzeń",
       "Waha się w granicach 5%-10% całkowitego czasu trwania wszystkich działań projektowych",
-      "Wpisywana w harmonogram jako fikcyjne działanie ostatnie",
+      "Wpisywana w harmonogram jako fikcyjne działanie ostatnie do wykonania w projekcie.",
       "Zwykle rezerwę ujawnia się zespołowi projektowemu"
     ]
   },
@@ -383,27 +389,25 @@
   {
     "id": "38",
     "type": "open",
-    "question": "O ile % (wg badań IBC) wydłuża się źle zaplanowany projekt? (xx-yy%)",
+    "question": "O ile % (wg badań IBC) wydłuża się źle zaplanowany projekt (odpowiedź w dokładnym formacie xx-yy%)",
     "correctAnswers": ["18-36%"]
   },
   {
     "id": "39",
     "type": "multiple",
-    "question": "Co robimy w trakcie planowania? (zaznacz prawdziwe)",
+    "question": "Co robimy w trakcie planowania (zaznaczy tylko poprawne odpowiedzi)?",
     "options": [
       "Prognozujemy koszty projektu",
       "Przygotowujemy szczegółowy plan wdrożenia rezultatów projektu",
-      "Planujemy zasoby jakie będą potrzebne",
+      "Planujemy zasoby jakie będą potrzebne w trakcie projektu",
       "Monitorujemy i kontrolujemy projekt",
       "Szacujemy czas zadań projektowych",
       "Przypisujemy konkretne osoby do ról projektowych"
     ],
     "correctAnswers": [
       "Prognozujemy koszty projektu",
-      "Przygotowujemy szczegółowy plan wdrożenia rezultatów projektu",
-      "Planujemy zasoby jakie będą potrzebne",
-      "Szacujemy czas zadań projektowych",
-      "Przypisujemy konkretne osoby do ról projektowych"
+      "Planujemy zasoby jakie będą potrzebne w trakcie projektu",
+      "Szacujemy czas zadań projektowych"
     ]
   },
   {
@@ -428,14 +432,14 @@
     "type": "multiple",
     "question": "Co musi zawierać wniosek o zmianę w projekcie?",
     "options": ["Plan naprawczy", "Opis zmiany", "Działania", "Audyt końcowy", "Uzasadnienie biznesowe"],
-    "correctAnswers": ["Opis zmiany", "Uzasadnienie biznesowe"]
+    "correctAnswers": ["Opis zmiany", "Działania", "Uzasadnienie biznesowe"]
   },
   {
     "id": "42",
     "type": "single",
     "question": "Na jakie pytanie odpowiadamy podczas uruchamiania realizacji projektu?",
     "options": ["Kto to zrobi?", "Skąd wiadomo że zostało to zrobione?", "Co trzeba będzie zrobić?", "Jak to zrobimy?"],
-    "correctAnswer": ""
+    "correctAnswer": "Kto to zrobi?"
   },
   {
     "id": "43",
@@ -444,16 +448,27 @@
     "correctAnswers": ["Zbyt rzadko - problemy zespołu nie są komunikowane i długo czekają na rozwiązanie; Zbyt często – tracimy czas na organizację"]
   },
   {
+    "id": "43",
+    "type": "matching",
+    "question": "Co się dzieje gdy spotkania organizujemy:",
+    "leftItems": ["Zbyt rzadko", "Zbyt często"],
+    "rightItems": ["problemy zespołu nie są komunikowane i długo czekają na rozwiązanie", "tracimy czas na organizację"],
+    "correctMap": {
+      "Zbyt rzadko": "problemy zespołu nie są komunikowane i długo czekają na rozwiązanie",
+      "Zbyt często": "tracimy czas na organizację"
+    }
+  },
+  {
     "id": "44",
     "type": "single",
     "question": "Alokacja zasobów to",
     "options": [
-      "Przypisanie zasobów do działań",
-      "Przypisanie działań do zadań",
-      "Przypisanie zasobów do punktów krytycznych",
-      "Przypisanie działań do raportów"
+      "Przypisanie zasobów do działań w przygotowanym harmonogramie",
+      "Przypisanie działań do zadań w przygotowanym harmonogramie",
+      "Przypisanie zasobów do punktów krytycznych w przygotowanym harmonogramie",
+      "Przypisanie działań do raportów w przygotowanym harmonogramie"
     ],
-    "correctAnswer": ""
+    "correctAnswer": "Przypisanie zasobów do działań w przygotowanym harmonogramie"
   },
   {
     "id": "45",
@@ -463,18 +478,20 @@
   },
   {
     "id": "46",
-    "type": "ordering",
+    "type": "matching",
     "question": "Dopasuj modele do opisów",
-    "options": [
-      "Model dyrektywny - Decyzję podejmuje autorytet samodzielnie",
-      "Model partycypacyjny - W podejmowaniu decyzji udział bierze każdy członek zespołu",
-      "Model konsultacyjny - Decyzję podejmuje autorytet po konsultacji z wybranymi członkami zespołu"
-    ]
+    "leftItems": ["Model dyrektywny", "Model partycypacyjny", "Model konsultacyjny"],
+    "rightItems": ["Decyzję podejmuje autorytet samodzielnie", "W podejmowaniu decyzji udział bierze każdy członek zespołu", "Decyzję podejmuje autorytet po konsultacji z wybranymi członkami zespołu"],
+    "correctMap": {
+      "Model dyrektywny": "Decyzję podejmuje autorytet samodzielnie",
+      "Model partycypacyjny": "W podejmowaniu decyzji udział bierze każdy członek zespołu",
+      "Model konsultacyjny": "Decyzję podejmuje autorytet po konsultacji z wybranymi członkami zespołu"
+    }
   },
   {
     "id": "47",
     "type": "open",
-    "question": "Jak długo zwykle trwa pierwsza część kick-off meeting (minuty)?",
+    "question": "Jak długo, zwykle trwa pierwsza część kick-off meeting (minuty)?",
     "correctAnswers": ["30"]
   },
   {
@@ -482,7 +499,7 @@
     "type": "multiple",
     "question": "Ogólna struktura zespołu składa się z:",
     "options": ["Menedżerowie programu", "Zespół podstawowy", "Kontraktorzy", "Zespół klienta", "Zespół audytorów"],
-    "correctAnswers": ["Menedżerowie programu", "Zespół podstawowy", "Kontraktorzy", "Zespół klienta"]
+    "correctAnswers": ["Zespół podstawowy", "Kontraktorzy", "Zespół klienta"]
   },
   {
     "id": "49",
@@ -495,34 +512,34 @@
   },
   {
     "id": "50",
-    "type": "multiple",
-    "question": "O którym kanale komunikacji trzeba bardzo pamiętać?",
+    "type": "single",
+    "question": "O którym kanale komunikacji trzeba bardzo pamiętać w codziennej pracy z programistami?",
     "options": ["bezpośrednia rozmowa", "wideokonferencja", "czat (slack/etc)", "email", "forma pisemna", "telefon"],
-    "correctAnswers": ["bezpośrednia rozmowa", "czat (slack/etc)"]
+    "correctAnswers": ["bezpośrednia rozmowa"]
   },
   {
     "id": "51",
-    "type": "multiple",
-    "question": "\"Oko pańskie konia tuczy\" - prawdziwe odpowiedzi",
+    "type": "single",
+    "question": "\"Oko pańskie konia tuczy\" - zaznacz prawdziwe odpowiedzi",
     "options": [
-      "Obowiązkiem menadżera jest dbanie o odżywianie się zespołu",
+      "Obowiązkiem manadżera projektu jest dbanie o prawidłowe odżywianie się członków zespółu",
       "Trzeba obserwować konie żeby były grube",
-      "Szef powinien codziennie monitorować każdy projekt",
-      "Jeśli menedżer dogląda, firma lepiej funkcjonuje"
+      "Szef firmy powinien spędzać czas codziennie na dokładne monitorowanie każdego projektu w firmie",
+      "Jeśli osoba zarządzająca sama dogląda i pilnuje interesów, to taka firma lepiej funkcjonuje i przynosi zyski."
     ],
-    "correctAnswers": ["Jeśli menedżer dogląda, firma lepiej funkcjonuje"]
+    "correctAnswers": ["Jeśli osoba zarządzająca sama dogląda i pilnuje interesów, to taka firma lepiej funkcjonuje i przynosi zyski."]
   },
   {
     "id": "52",
     "type": "single",
-    "question": "Podczas monitorowania i kontroli odpowiadamy na pytanie:",
+    "question": "Podczas monitorowania i kontroli ciągle odpowiadamy sobie na pytanie:",
     "options": [
       "Jak planujemy robienie tego co sprawdzamy?",
       "Jak sprawdzać że robimy to co zaplanowaliśmy?",
       "Jak sprawdzać że planujemy to co robimy?",
       "Jak robić to co sprawdzamy żeby zaplanować?"
     ],
-    "correctAnswer": ""
+    "correctAnswer": "Jak sprawdzać że robimy to co zaplanowaliśmy?"
   },
   {
     "id": "53",
@@ -558,43 +575,44 @@
   },
   {
     "id": "56",
-    "type": "multiple",
-    "question": "15-min stand-up NIE pasuje:",
+    "type": "single",
+    "question": "Zaznacz NIE pasujące zdanie. 15 minutowy stand-up:",
     "options": [
       "spotkania monitorujące w APM",
       "omawiamy realizowane zadania",
       "przeprowadzamy analizę wartości dodanej",
       "na stojąco",
-      "nie omawiamy problemów"
+      "nie omawiamy problemów, jeśli są zgłaszane to rezerwujemy oddzielne spotkanie"
     ],
     "correctAnswers": ["przeprowadzamy analizę wartości dodanej"]
   },
   {
     "id": "57",
     "type": "single",
-    "question": "Trendy odchyleń najlepiej opisać jako:",
+    "question": "Trendy odchyleń pokazane na obrazie najlepiej można opisać w sposób:",
     "options": ["przebieg sukcesywny", "sukcesywne odchylenia", "gwałtowne odchylenia", "zmiany harmonogramu"],
-    "correctAnswer": ""
+    "correctAnswer": "sukcesywne odchylenia"
   },
   {
     "id": "58",
     "type": "multiple",
-    "question": "Jak trzymać projekt w ryzach - NIE pasuje:",
+    "question": "Jak trzymać projekt w ryzach - zaznacz te które NIE pasują.",
     "options": [
       "Pilnuj ‘dowożenia’ zadań",
-      "Kupuj drogie prezenty",
-      "Nie zgaduj – pytaj",
+      "Kupuj członkom zespołu drogie prezenty",
+      "Nie zgaduj i nie zakładaj - po prostu pytaj.",
       "Organizuj daily stand-ups",
       "Uważaj na ‘scope creep’",
-      "Bądź szczery ze sobą i zespołem",
-      "Proś o nadgodziny",
-      "Reaguj na problemy",
-      "Dostarczaj wymagania zgodnie z zakresem",
+      "Bądź szczery ze sobą i swoim zespołem.",
+      "Często proś zespół o pracę w nadgodzinach aby można było szybciej zakończyć projekt",
+      "Bezzwłocznie reaguj na zgłaszane problemy.",
+      "Dostarczaj wymagania projektowe zgodnie z zakresem i nie staraj się ‘dowieźć’ więcej.",
       "Wystarczająco dobre jest wystarczająco dobre"
     ],
     "correctAnswers": [
-      "Kupuj drogie prezenty",
-      "Proś o nadgodziny"
+      "Kupuj członkom zespołu drogie prezenty",
+      "Często proś zespół o pracę w nadgodzinach aby można było szybciej zakończyć projekt",
+      "Dostarczaj wymagania projektowe zgodnie z zakresem i nie staraj się ‘dowieźć’ więcej."
     ]
   },
   {
@@ -610,8 +628,7 @@
     ],
     "correctAnswers": [
       "Jak przekazać klientowi to co zrobiliśmy?",
-      "Jak zrobić to lepiej następnym razem?",
-      "Skąd wiadomo że zostało to zrobione?"
+      "Jak zrobić to lepiej następnym razem?"
     ]
   },
   {
@@ -619,43 +636,45 @@
     "type": "single",
     "question": "Kryteria akceptacji uzgadniamy z klientem w fazie:",
     "options": ["Rozpoczynania", "Monitorowania i kontroli", "Planowania", "Zamykania", "Definiowania zakresu"],
-    "correctAnswer": ""
+    "correctAnswer": "Planowania"
   },
   {
     "id": "61",
     "type": "single",
     "question": "Kryteria akceptacji sprawdzamy razem z klientem w fazie:",
     "options": ["Definiowania zakresu", "Planowania", "Zamykania", "Rozpoczynania", "Monitorowania i kontrolo"],
-    "correctAnswer": ""
+    "correctAnswer": "Zamykania"
   },
   {
     "id": "62",
     "type": "single",
     "question": "Które zdanie NIE pasuje do kryteriów akceptacji:",
     "options": [
-      "Kryteria powinny być jasno zdefiniowane",
-      "Opisują warunki zakończenia projektu",
-      "Klient nie powinien mieć wpływu",
-      "Zostały zdefiniowane w fazie planowania",
-      "Unikamy w ten sposób 12h dyskusji"
+      "Kryteria akceptacji powinny być jasno zdefiniowane.",
+      "Opisują warunki pod jakimi projekt zostaje uznany za zakończony.",
+      "Klient nie powinien mieć wpływu na kryteria akceptacji.",
+      "Zostały zdefiniowane w fazie planowania (a przynajmniej powinny).",
+      "Unikamy w ten sposób 12h dyskusji z klientem."
     ],
-    "correctAnswer": "Klient nie powinien mieć wpływu"
+    "correctAnswer": "Klient nie powinien mieć wpływu na kryteria akceptacji."
   },
   {
     "id": "63",
-    "type": "ordering",
-    "question": "Zaplanuj szokowe przekazanie rezultatów projektu",
-    "options": [
-      "Rezultat 1 – Czerwiec",
-      "Rezultat 2 – Czerwiec",
-      "Rezultat 3 – Czerwiec",
-      "Rezultat 4 – Czerwiec"
-    ]
+    "type": "matching",
+    "question": "Trzy filary SCRUM",
+    "leftItems": ["Rezultat 1", "Rezultat 2", "Rezultat 3", "Rezultat 4"],
+    "rightItems": ["Czerwiec", "Czerwiec", "Czerwiec", "Czerwiec"],
+    "correctMap": {
+      "Rezultat 1": "Czerwiec",
+      "Rezultat 2": "Czerwiec",
+      "Rezultat 3": "Czerwiec",
+      "Rezultat 4": "Czerwiec" 
+    }
   },
   {
     "id": "64",
     "type": "multiple",
-    "question": "Dokumenty do zachowania na koniec projektu:",
+    "question": "Zaznacz wszystkie rodzaje dokumentów które warto zachować na koniec projektu",
     "options": [
       "propozycja projektu",
       "protokoły spotkań",
@@ -670,38 +689,53 @@
       "raporty nierozwiązanych problemów",
       "projekty i rysunki techniczne"
     ],
-    "correctAnswers": []
+    "correctAnswers": [
+      "propozycja projektu",
+      "protokoły spotkań",
+      "statut projektu",
+      "dokumenty potwierdzające akceptację klienta",
+      "raport zamykający",
+      "próbki rezultatów projektu",
+      "wnioski o zmiany",
+      "kolejne wersje harmonogramu",
+      "raporty o stanie",
+      "raport z audytu powdrożeniowego",
+      "raporty nierozwiązanych problemów",
+      "projekty i rysunki techniczne"
+    ]
   },
   {
     "id": "65",
-    "type": "ordering",
-    "question": "Zaplanuj stopniowe przekazanie rezultatów projektu",
-    "options": [
-      "Rezultat 1 – Marzec",
-      "Rezultat 2 – Kwiecień",
-      "Rezultat 3 – Maj",
-      "Rezultat 4 – Czerwiec"
-    ]
+    "type": "matching",
+    "question": "Trzy filary SCRUM",
+    "leftItems": ["Rezultat 1", "Rezultat 2", "Rezultat 3", "Rezultat 4"],
+    "rightItems": ["Marzec", "Kwiecień", "Maj", "Czerwiec"],
+    "correctMap": {
+      "Rezultat 1": "Marzec",
+      "Rezultat 2": "Kwiecień",
+      "Rezultat 3": "Maj",
+      "Rezultat 4": "Czerwiec" 
+    }
   },
   {
     "id": "66",
     "type": "multiple",
-    "question": "Powody kompletowania dokumentacji:",
+    "question": "Zaznacz wszystkie powody dla których warto kompletować dokumentację",
     "options": [
-      "Materiał szkoleniowy",
-      "Źródło informacji przy zmianach",
-      "Przydatne tylko na wypadek audytu",
-      "Można pominąć",
-      "Historyczne dane do estymacji",
-      "Ocena jakości pracy",
-      "Wskazówki dla przyszłych zespołów"
+      "Materiał szkoleniowy dla przyszłych menedżerów.",
+      "Kompletna dokumentacja to źródło informacji przy wprowadzaniu przyszłych zmian w projekcie.",
+      "Kompletowanie dokumentacji jest przydatne tylko na wypadek audytu powdrożeniowego.",
+      "W większości projektów można pominąć kompletowanie dokumentacji.",
+      "Historyczne dane do estymacji czasu i kosztów.",
+      "Ocena jakości pracy menedżera i członków zespołu.",
+      "Przydatne wskazówki dla zespołów pracujących nad przyszłymi projektami."
     ],
     "correctAnswers": [
-      "Materiał szkoleniowy",
-      "Źródło informacji przy zmianach",
-      "Historyczne dane do estymacji",
-      "Ocena jakości pracy",
-      "Wskazówki dla przyszłych zespołów"
+      "Materiał szkoleniowy dla przyszłych menedżerów.",
+      "Kompletna dokumentacja to źródło informacji przy wprowadzaniu przyszłych zmian w projekcie.",
+      "Historyczne dane do estymacji czasu i kosztów.",
+      "Ocena jakości pracy menedżera i członków zespołu.",
+      "Przydatne wskazówki dla zespołów pracujących nad przyszłymi projektami."
     ]
   },
   {
@@ -727,21 +761,32 @@
       "know-how",
       "własność intelektualna"
     ],
-    "correctAnswers": []
+    "correctAnswers": [
+      "bezpieczeństwo",
+      "dostępność",
+      "użyteczność",
+      "funkcjonalność",
+      "gotówka",
+      "wydajność",
+      "kultura organizacyjna",
+      "wartość marki",
+      "know-how",
+      "własność intelektualna"
+    ]
   },
   {
     "id": "69",
     "type": "single",
-    "question": "Zdanie które NIE pasuje do wymagań w świecie Agile:",
+    "question": "Zaznacz zdanie które NIE pasuje do wymagań w świecie Agile",
     "options": [
-      "Może przebudować cały zakres projektu",
-      "Niektóre wymagania ujawnią się na etapie testów",
-      "Na starcie wiemy że wymagania nie są kompletne",
-      "W trakcie pojawiają się nowe wymagania",
-      "Część wymagań może się wzajemnie wykluczać",
-      "Agile wymusza dobre zdefiniowanie przed startem"
+      "Może pojawić się konieczność przebudowania całego zakresu projektu.",
+      "Niektóre wymagania ujawnią się na etapie testów integracyjnych.",
+      "Już na starcie projektu wiemy że wymagania nie są kompletne.",
+      "W trakcie projektu pojawiają się nowe wymagania.",
+      "Część wymagań może się wzajemnie wykluczać.",
+      "Agile wymusza dobre zdefiniowanie wymagań przed rozpoczęciem projektu."
     ],
-    "correctAnswer": "Agile wymusza dobre zdefiniowanie przed startem"
+    "correctAnswer": "Agile wymusza dobre zdefiniowanie wymagań przed rozpoczęciem projektu."
   },
   {
     "id": "70",
@@ -825,12 +870,12 @@
     "type": "single",
     "question": "Niepewność projektowa to",
     "options": [
-      "założenie że nie ma czynników wpływających na projekt",
-      "efekt szybko zmieniających się warunków rynkowych",
-      "działania prowadzące do konsumpcji zasobów",
-      "korzyści dla akcjonariuszy"
+      "założenie że nie ma żadnych czynników wpływających na projekt",
+      "efekt szybko zmieniających się warunków rynkowych które wymagają szybkich reakcji.",
+      "działania prowadzące do konsumpcji zasobów (zwykle ludzi i czasu).",
+      "korzyści, które firma generuje dla swoich akcjonariuszy"
     ],
-    "correctAnswer": ""
+    "correctAnswer": "efekt szybko zmieniających się warunków rynkowych które wymagają szybkich reakcji."
   },
   {
     "id": "78",
@@ -849,204 +894,234 @@
   },
   {
     "id": "79",
-    "type": "open",
-    "question": "Kto jest głównym autorem \"The Agile Manifesto\"? (Imię Nazwisko)",
-    "correctAnswers": ["Martin Fowler"]
+    "type": "single",
+    "question": "Co oznacza \"W regularnych odstępach czasu zespół analizuje możliwości poprawy swojej wydajności, a następnie dostraja i dostosowuje swoje działania do wyciągniętych wniosków\"",
+    "options": [
+      "Poprawa wydajności pracy zespołu nie zależy regularnych przeglądów postępów prac.",
+      "Należy systematycznie analizować swoje metody pracy i dbać o to aby nie wdrażać wniosków z tej analizy.",
+      "Dostrajanie swoich działań powinno odbywać się na podstawie analizy możliwości poprawy swojej wydajności",
+      "Wyciąganie wniosków analitycznych dostraja regularne odstępy czasu i możlwości."
+    ],
+    "correctAnswers": [
+      "Dostrajanie swoich działań powinno odbywać się na podstawie analizy możliwości poprawy swojej wydajności"
+    ]
   },
   {
     "id": "80",
+    "type": "open",
+    "question": "Kto jest głównym autorem \"The Agile Manifesto\"? Format: Imię Nazwisko",
+    "correctAnswers": ["Martin Fowler"]
+  },
+  {
+    "id": "81",
     "type": "multiple",
     "question": "W wyniku naszej pracy, zaczęliśmy bardziej cenić:",
     "options": [
       "Współpracę z klientem - od negocjacji umów",
       "Ludzi i interakcje - od procesów i narzędzi",
-      "Działające oprogramowanie - od dokumentacji",
-      "Reagowanie na zmiany - od założonego planu"
+      "Działające oprogramowanie - od szczegółowej dokumentacji",
+      "Reagowanie na zmiany - od realizacji założonego planu"
     ],
     "correctAnswers": [
       "Współpracę z klientem - od negocjacji umów",
       "Ludzi i interakcje - od procesów i narzędzi",
-      "Działające oprogramowanie - od dokumentacji",
-      "Reagowanie na zmiany - od założonego planu"
+      "Działające oprogramowanie - od szczegółowej dokumentacji",
+      "Reagowanie na zmiany - od realizacji założonego planu"
     ]
-  },
-  {
-    "id": "81",
-    "type": "single",
-    "question": "Zadowolenie klienta dzięki wczesnemu i ciągłemu wdrażaniu oprogramowania oznacza:",
-    "options": [
-      "klient niezależnie od jakości zawsze będzie niezadowolony",
-      "częste wdrażanie wysokiej jakości oprogramowania zwiększa zadowolenie klienta",
-      "należy unikać pytań do klienta"
-    ],
-    "correctAnswer": "częste wdrażanie wysokiej jakości oprogramowania zwiększa zadowolenie klienta"
   },
   {
     "id": "82",
     "type": "single",
-    "question": "Gotowi na zmiany wymagań nawet na późnym etapie oznacza:",
+    "question": "Co oznacza \"Najwyższy priorytet ma dla nas zadowolenie klienta dzięki wczesnemu iciągłemu wdrażaniu wartościowego oprogramowania.\"",
     "options": [
-      "zmiany są przyczyną zła",
-      "metodyki zwinne są gotowe na zmiany i wykorzystują je",
-      "zmiany akceptowane tylko późno"
+      "Zadowolenie klienta nie zależy od jakości oprogramowania",
+      "Nieważne co zrobimy, klient i tak zawsze będzie niezadowolony.",
+      "Lepiej nie pytać klienta o zdanie bo może zmienić wymagania.",
+      "Częste wdrażanie wysokiej jakości oprogramowania zwiększa zadowolenie klienta."
     ],
-    "correctAnswer": "metodyki zwinne są gotowe na zmiany i wykorzystują je"
+    "correctAnswer": "Częste wdrażanie wysokiej jakości oprogramowania zwiększa zadowolenie klienta."
   },
   {
     "id": "83",
     "type": "single",
-    "question": "Dostarczajcie działające oprogramowanie często oznacza:",
+    "question": "Co oznacza: \"Bądźcie gotowi na zmiany wymagań nawet na późnym etapie jego rozwoju.Procesy zwinne wykorzystują zmiany dla zapewnienia klientowi konkurencyjności.\"",
     "options": [
-      "częściej = gorsza jakość",
-      "należy dostarczać działające oprogramowanie, im częściej tym lepiej",
-      "należy wydłużać czas dostarczania"
+      "Zmiany w projekcie są przyczyną wszelkiego zła.",
+      "Metodyki zwinne są gotowe na zmiany i używają ich do ulepszania projektu.",
+      "Wyłączną miarą konkurencyjności projektu jest ilość zmian projektowych.",
+      "Zmiany w projekcie agile akceptowane są tylko na późnym etapie projektu."
     ],
-    "correctAnswer": "należy dostarczać działające oprogramowanie, im częściej tym lepiej"
+    "correctAnswer": "Metodyki zwinne są gotowe na zmiany i używają ich do ulepszania projektu."
   },
   {
     "id": "84",
     "type": "single",
-    "question": "Współpraca biznes-deweloperzy musi trwać cały czas oznacza:",
+    "question": "Co oznacza \"Dostarczajcie funkcjonujące oprogramowanie często, w kilkutygodniowychlub kilkumiesięcznych odstępach. Im częściej, tym lepiej.\"",
     "options": [
-      "biznes zawsze potrafi przekazać wiedzę",
-      "komunikacja między nimi jest kluczowa",
-      "programiści mogą ignorować wskazówki"
+      "Im częściej dostarcza się oprogramowanie, tym gorszej będzie ono jakości.",
+      "Najważniejsze jest jak najszybsze dostarczenie oprogramowania, nawet jeśli nie działa ono tak jak powinno.",
+      "Należy dostarczać działające oprogramowanie, im częściej tym lepiej.",
+      "Metodyki zwinne wyraźnie mówią że należy wydłużać czas dostarczania oprogramowania."
     ],
-    "correctAnswer": "komunikacja między nimi jest kluczowa"
+    "correctAnswer": "Należy dostarczać działające oprogramowanie, im częściej tym lepiej."
   },
   {
     "id": "85",
     "type": "single",
-    "question": "Zaufaj zmotywowanym ludziom oznacza:",
+    "question": "Co oznacza \"Zespoły biznesowe i deweloperskie muszą ściśle ze sobą współpracować w codziennej pracy przez cały czas trwania projektu.\"",
     "options": [
-      "najważniejsza motywacja to wynagrodzenie",
-      "przyjazne środowisko i zaufanie są kluczowe",
-      "wsparcie nie ma wpływu"
+      "Zespół biznesowy zawsze potrafi jasno i klarownie przekazać wiedzę dla programistów.",
+      "Komunikacja i współpraca między technicznymi i nie technicznymi członkami zespołu jest istotna dla powodzenia projektu.",
+      "Zarówno zespół biznesowy jak i dewloperski muszą dobrze znać języki programowania używane w projekcie",
+      "Programiści mogą zignorować wskazówki zespołu biznesowego jeśli ich nie rozumieją."
     ],
-    "correctAnswer": "przyjazne środowisko i zaufanie są kluczowe"
+    "correctAnswer": "Komunikacja i współpraca między technicznymi i nie technicznymi członkami zespołu jest istotna dla powodzenia projektu."
   },
   {
     "id": "86",
     "type": "single",
-    "question": "Rozmowa twarzą w twarz jest najefektywniejsza oznacza:",
+    "question": "Co oznacza: \"Twórzcie projekty wokół zmotywowanych ludzi. Zapewnijcie im potrzebne środowisko oraz wsparcie i zaufajcie, że wykonają powierzone zadanie.\"",
     "options": [
-      "informacje tylko w rozmowie",
-      "rozmowa przekazuje dodatkowy kontekst i jest efektywna",
-      "trzeba unikać rozmowy twarzą w twarz"
+      "Najważniejszą motywacją do pracy jest wysokie wynagrodznie. Pozostałe czynniki mają marginalne znaczenie.",
+      "Na powodzenie projektu wpływa przyjazane środowisko pracy, zaufanie do zespołu i wiele innych czynników.",
+      "Wzajemne wspieranie zespołu nie ma wpływu na wykonywanie zadań.",
+      "W zespole każdy powinien zajmować się tylko swoimi zadaniami, dzięki temu szybko je ukończy i przyczyni się do sukcesu projektu."
     ],
-    "correctAnswer": "rozmowa przekazuje dodatkowy kontekst i jest efektywna"
+    "correctAnswer": "Na powodzenie projektu wpływa przyjazane środowisko pracy, zaufanie do zespołu i wiele innych czynników."
   },
   {
     "id": "87",
-    "type": "multiple",
-    "question": "Model NIE jest modelem adaptacyjnym:",
+    "type": "single",
+    "question": "Co oznacza: \"Najbardziej efektywnym i wydajnym sposobem przekazywania informacji zespołowi deweloperskiemu i wewnątrz niego jest rozmowa twarzą w twarz.\"",
     "options": [
-      "Adaptive Software Development (ASD)",
-      "Kanban",
-      "Extreme Programming (XP)",
-      "PROMPT"
+      "Informacje projektowe powinny być przekazywane tylko i wyłącznie w postaci rozmowy",
+      "Zwyczajna rozmowa przekazuje dodatkowy kontekst w postaci tembru głosu, mowy ciała czy wyrazu oczu, i dzięku temu jest bardzo efektywna",
+      "Wydajność zespołu deweloperskiego wyraźnie rośnie wraz ze wzrostem ilości i różnorodności kanałów komuniakcyjnych.",
+      "Rozmowa twarzą w twarz z programistami powoduje u nich dużo stresu i z tego powodu trzeba jej unikać."
     ],
-    "correctAnswers": ["PROMPT"]
+    "correctAnswer": "Zwyczajna rozmowa przekazuje dodatkowy kontekst w postaci tembru głosu, mowy ciała czy wyrazu oczu, i dzięku temu jest bardzo efektywna"
   },
   {
     "id": "88",
-    "type": "ordering",
-    "question": "Trzy filary SCRUM - kolejność (Inspekcja, Przejrzystość, Adaptacja)",
-    "options": ["Inspekcja", "Przejrzystość", "Adaptacja"]
+    "type": "single",
+    "question": "Zaznacz model który NIE jest modelem adaptacyjnym",
+    "options": [
+      "Adaptive Sonware Development (ASD), 2000, Jim Highsmith i Sam Bayer",
+      "Kanban, David Anderson 2010, ‘Kanban’",
+      "Extreme programming (XP), 1999, Kent Beck",
+      "PROMPT - Project Resource OrganisaHon Management Planning Technique - stworzona przez Simpact Systems Ltd."
+    ],
+    "correctAnswers": ["PROMPT - Project Resource OrganisaHon Management Planning Technique - stworzona przez Simpact Systems Ltd."]
   },
   {
     "id": "89",
-    "type": "ordering",
-    "question": "Ustaw w kolejności: Planowanie Sprintu, Codzienny Scrum, Przegląd Sprintu",
-    "options": ["Planowanie Sprintu", "Codzienny Scrum", "Przegląd Sprintu"]
+    "type": "matching",
+    "question": "Trzy filary SCRUM",
+    "leftItems": ["Inspekcja", "Przejrzystość", "Adaptacja"],
+    "rightItems": ["Osoby wykorzystujące Scruma muszą poddawać częstej inspekcji artefakty scrumowe.", "Wszystkie istotne aspekty procesu muszą być widoczne dla osób odpowiedzialnych za osiągane rezultaty.", "Jeżeli podczas inspekcji zauważymy że wytwarzany produkt nie jest akceptowalny to dokonujemy zmian."],
+    "correctMap": {
+      "Inspekcja": "Osoby wykorzystujące Scruma muszą poddawać częstej inspekcji artefakty scrumowe.",
+      "Przejrzystość": "Wszystkie istotne aspekty procesu muszą być widoczne dla osób odpowiedzialnych za osiągane rezultaty.",
+      "Adaptacja": "Jeżeli podczas inspekcji zauważymy że wytwarzany produkt nie jest akceptowalny to dokonujemy zmian." 
+    }
   },
   {
     "id": "90",
+    "type": "ordering",
+    "question": "Ustaw w odpowiedniej kolejności",
+    "options": ["Planowanie Sprintu", "Codzienny Scrum", "Przegląd Sprintu"]
+  },
+  {
+    "id": "91",
     "type": "single",
     "question": "Scrum został osadzony w teorii:",
     "options": ["Empirycznej", "Emporialnej", "Enigmatycznej", "Enormatywnej"],
     "correctAnswer": "Empirycznej"
   },
   {
-    "id": "91",
+    "id": "92",
     "type": "single",
     "question": "Oficjalny dokument opisujący Scrum to:",
     "options": ["The Scrum Tales", "The Scrum Guide", "The Scrum Book", "Scrum Case Stories"],
     "correctAnswer": "The Scrum Guide"
   },
   {
-    "id": "92",
-    "type": "multiple",
+    "id": "93",
+    "type": "single",
     "question": "Lata 1994-2002 to:",
     "options": [
       "Podwójny wzrost liczby projektów zakończonych sukcesem",
       "Trzykrotny wzrost liczby projektów zakończonych sukcesem",
       "Nie było istotnych zmian"
     ],
-    "correctAnswers": []
+    "correctAnswers": ["Podwójny wzrost liczby projektów zakończonych sukcesem"]
   },
   {
-    "id": "93",
+    "id": "94",
+    "type": "open",
+    "question": "Imię i nazwisko Polaka, który stworzył metodę zbliżoną do diagramów Gantta:",
+    "correctAnswers": ["Karol Adamiecki"]
+  },
+    {
+    "id": "95",
     "type": "open",
     "question": "W którym roku powstał Agile Manifesto?",
     "correctAnswers": ["2001"]
   },
   {
-    "id": "94",
+    "id": "96",
     "type": "multiple",
     "question": "W wyniku pracy zaczęliśmy cenić:",
     "options": [
       "Negocjację umów od współpracy z klientem",
-      "Dokumentację od działającego oprogramowania",
-      "Realizację planu od reagowania na zmiany",
+      "Szczegółową dokumentację od działającego oprogramowania",
+      "Realizację założonego planu od reagowania na zmiany",
       "Ludzi i interakcje od procesów i narzędzi"
     ],
     "correctAnswers": [
-      "Ludzi i interakcje od procesów i narzędzi",
-      "Działające oprogramowanie od dokumentacji",
-      "Reagowanie na zmiany od planu"
+      "Ludzi i interakcje od procesów i narzędzi"
     ]
   },
   {
-    "id": "95",
+    "id": "97",
     "type": "open",
     "question": "Rok powstania “The Scrum Guide”",
     "correctAnswers": ["2009"]
   },
   {
-    "id": "96",
+    "id": "98",
     "type": "open",
     "question": "Zmienność, niepewność, złożoność, niejednoznaczność to?",
     "correctAnswers": ["VUCA"]
   },
   {
-    "id": "97",
+    "id": "99",
     "type": "single",
     "question": "Jaki % projektów zarządza się przy użyciu APM?",
     "options": ["60%", "70%", "80%", "90%", "85%", "90%"],
-    "correctAnswer": ""
+    "correctAnswer": "70%"
   },
   {
-    "id": "98",
+    "id": "100",
     "type": "multiple",
     "question": "Zaznacz grupę procesów PMLC:",
     "options": ["Adaptacja", "Zamykanie", "Inspekcja", "Ocena ryzyka"],
     "correctAnswers": ["Zamykanie"]
   },
   {
-    "id": "99",
+    "id": "101",
     "type": "open",
     "question": "Jakim skrótem oznacza się podział struktury wymagań?",
     "correctAnswers": ["WBS"]
   },
   {
-    "id": "100",
+    "id": "102",
     "type": "open",
     "question": "Jak nazywa się pierwsze spotkanie projektowe?",
     "correctAnswers": ["kick-off"]
   },
   {
-    "id": "101",
+    "id": "103",
     "type": "single",
     "question": "Wybierz zdanie prawdziwe dla TPM:",
     "options": [
@@ -1056,27 +1131,27 @@
       "Zmiany – sposób na zbieranie wymagań",
       "Specyfikacja – dokładna i kompletna"
     ],
-    "correctAnswer": ""
+    "correctAnswer": "Specyfikacja – dokładna i kompletna"
   },
   {
-    "id": "102",
+    "id": "104",
     "type": "single",
     "question": "Ile tygodni trwa zwykle sprint?",
     "options": ["1-4", "2-5", "2-4", "4-8"],
-    "correctAnswer": ""
+    "correctAnswer": "2-4"
   },
   {
-    "id": "103",
+    "id": "105",
     "type": "single",
     "question": "Zadania w sprincie bierzemy z:",
     "options": ["Sprint review", "Sprint retrospective", "Product increment", "Sprint backlog", "Product backlog"],
     "correctAnswer": "Sprint backlog"
   },
   {
-    "id": "104",
+    "id": "106",
     "type": "single",
     "question": "O ile wzrosły koszta wytwarzania oprogramowania?",
     "options": ["2.5 biliona", "5 bilionów", "10 bilionów"],
-    "correctAnswer": ""
+    "correctAnswer": "10 bilionów"
   }
 ]

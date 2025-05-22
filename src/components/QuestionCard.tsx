@@ -74,12 +74,17 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({ question, answer, on
       {question.type === 'single' && (
         <div className="flex flex-col space-y-2 mt-4">
           {question.options.map(opt => (
-            <label key={opt} className="flex items-center gap-3 text-lg text-[#16191E]">
-              <Checkbox
-                checked={answer === opt}
-                onChange={() => handleSingle(opt)}
-              />
-              {opt}
+            <label
+              key={opt}
+              className="flex flex-wrap items-start gap-3 text-lg text-[#16191E]"
+            >
+             
+                <Checkbox
+                  checked={answer === opt}
+                  onChange={() => handleSingle(opt)}
+                />
+              
+              <span className="flex-1 break-words">{opt}</span>
             </label>
           ))}
         </div>
@@ -88,7 +93,7 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({ question, answer, on
       {question.type === 'multiple' && (
         <div className="flex flex-col space-y-2 mt-4">
           {question.options.map(opt => (
-            <label key={opt} className="flex items-center gap-3 text-lg text-[#16191E]">
+            <label key={opt} className="flex items-center gap-3 text-lg text-[#16191E] border">
               <Checkbox
                 checked={Array.isArray(answer) && answer.includes(opt)}
                 onChange={() => handleMultiple(opt)}

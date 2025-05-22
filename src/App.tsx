@@ -19,7 +19,7 @@ type QuestionUnion =
   | OpenQuestion
   | OrderingQuestion
   | MatchingQuestion;
-
+   
 export default function App() {
   const [current, setCurrent] = useState(0);
   const [answers, setAnswers] = useState<Record<string, AnswerType>>({});

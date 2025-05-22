@@ -4,7 +4,7 @@
     "type": "single",
     "question": "O ile zwiększył wydajność pracy Frederick Taylor?",
     "options": ["3,8", "1,3", "9,13", "15,7"],
-    "correctAnswer": ""
+    "correctAnswer": "3,8"
   },
   {
     "id": "2",

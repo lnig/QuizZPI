@@ -76,18 +76,19 @@ export default function App() {
   };
 
   return (
-    <div className='flex flex-col items-center justify-center py-8 px-16'>
-      <div className="flex flex-col w-[1280px]">
+    <div className='flex flex-col items-center justify-center py-4 px-4 sm:py-8 sm:px-16'>
+      <div className="flex flex-col xl:w-[1280px]">
         <div className="text-2xl font-bold text-[#313642]">
           Pytanie {current + 1} z {total}
         </div>
 
         <QuestionCard question={q} answer={answer} onAnswer={handleAnswer} />
 
-        <div className="mt-4 flex gap-4">
+        <div className="mt-4 flex flex-col sm:flex-row gap-4">
           <Button 
             text='Poprzednie'
             size='m'
+            width='w-full sm:w-fit'
             type='secondary'
             Icon={ChevronLeft}
             onClick={() => setCurrent(curr => Math.max(0, curr - 1))}
@@ -97,6 +98,7 @@ export default function App() {
           <Button 
             text='Sprawdź'
             size='m'
+            width='w-full sm:w-fit'
             type='primary'
             Icon={Eye}
             onClick={() => setShowFeedback(true)}
@@ -105,6 +107,7 @@ export default function App() {
           <Button 
             text={current < total - 1 ? 'Następne' : 'Restart'}
             size='m'
+            width='w-full sm:w-fit'
             type='secondary'
             Icon={ChevronRight}
             onClick={goNext}

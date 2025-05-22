@@ -276,7 +276,7 @@
   },
   {
     "id": "28",
-    "type": "ordering",
+    "type": "matching",
     "question": "Cele S.M.A.R.T - ustaw w kolejności",
     "leftItems": ["Specific", "Measurable", "Assignable", "Realistic", "TimeRelated"],
     "rightItems": [

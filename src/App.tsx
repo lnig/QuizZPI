@@ -77,54 +77,85 @@ export default function App() {
 
   return (
     <div className='flex flex-col sm:items-center sm:justify-center py-4 px-4 sm:py-8 sm:px-16'>
-      <div className="flex flex-col xl:w-[1280px]">
-        <div className="text-2xl font-bold text-[#313642]">
-          Pytanie {current + 1} z {total}
-        </div>
-
-        <QuestionCard question={q} answer={answer} onAnswer={handleAnswer} />
-
-        <div className="mt-4 flex flex-col sm:flex-row gap-4">
-          <Button 
-            text='Poprzednie'
-            size='m'
-            width='w-full sm:w-fit'
-            type='secondary'
-            Icon={ChevronLeft}
-            onClick={() => setCurrent(curr => Math.max(0, curr - 1))}
-            disabled={current === 0}
-          />
-
-          <Button 
-            text='Sprawdź'
-            size='m'
-            width='w-full sm:w-fit'
-            type='primary'
-            Icon={Eye}
-            onClick={() => setShowFeedback(true)}
-          />
-
-          <Button 
-            text={current < total - 1 ? 'Następne' : 'Restart'}
-            size='m'
-            width='w-full sm:w-fit'
-            type='secondary'
-            Icon={ChevronRight}
-            onClick={goNext}
-          />
-        </div>
-       
-       {showFeedback && (
+      <div className="flex flex-col xl:w-[1024px]">
+        <div className='flex gap-4 items-center'>
+          <div className="text-2xl font-bold text-[#313642] lg:text-5xl">
+            Pytanie {current + 1} z {total}
+          </div>
+          {showFeedback && (
             <span
               className={
                 checkCorrect(q, answer)
-                  ? 'text-green-600 font-bold'
-                  : 'text-red-600 font-bold'
+                  ? 'text-green-600 font-bold mt-1 lg:text-2xl'
+                  : 'text-red-500 font-bold mt-1 lg:text-2xl'
               }
             >
               {checkCorrect(q, answer) ? '✔ Poprawna' : '✖ Błędna'}
             </span>
           )}
+        </div>
+       
+        <QuestionCard question={q} answer={answer} onAnswer={handleAnswer} />
+
+        <div className="mt-4 flex flex-col sm:flex-row">
+          <div className='flex flex-col gap-4 xl:hidden'>
+            <Button 
+              text='Poprzednie'
+              size='m'
+              width='w-full sm:w-fit'
+              type='secondary'
+              Icon={ChevronLeft}
+              onClick={() => setCurrent(curr => Math.max(0, curr - 1))}
+              disabled={current === 0}
+            />
+            <Button 
+              text='Sprawdź'
+              size='m'
+              width='w-full sm:w-fit'
+              type='primary'
+              Icon={Eye}
+              onClick={() => setShowFeedback(true)}
+            />
+            <Button 
+              text={current < total - 1 ? 'Następne' : 'Restart'}
+              size='m'
+              width='w-full sm:w-fit'
+              type='secondary'
+              Icon={ChevronRight}
+              onClick={goNext}
+            />
+          </div>
+          
+          <div className='hidden xl:flex gap-4'>
+            <Button 
+              text='Poprzednie'
+              size='l'
+              width='w-full sm:w-fit'
+              type='secondary'
+              Icon={ChevronLeft}
+              onClick={() => setCurrent(curr => Math.max(0, curr - 1))}
+              disabled={current === 0}
+            />
+
+            <Button 
+              text='Sprawdź'
+              size='l'
+              width='w-full sm:w-fit'
+              type='primary'
+              Icon={Eye}
+              onClick={() => setShowFeedback(true)}
+            />
+
+            <Button 
+              text={current < total - 1 ? 'Następne' : 'Restart'}
+              size='l'
+              width='w-full sm:w-fit'
+              type='secondary'
+              Icon={ChevronRight}
+              onClick={goNext}
+            />
+          </div> 
+        </div>
       </div>
     </div>
   );

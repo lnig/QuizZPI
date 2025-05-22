@@ -69,22 +69,21 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({ question, answer, on
 
   return (
     <div className='min-h-72'>
-      <p className="text-xl text-[#313642] mt-3">{question.question}</p>
+      <p className="text-xl text-[#313642] mt-3 xl:mt-6 xl:text-3xl">{question.question}</p>
 
       {question.type === 'single' && (
         <div className="flex flex-col space-y-2 mt-4">
           {question.options.map(opt => (
             <label
               key={opt}
-              className="flex flex-wrap items-start gap-3 text-lg text-[#16191E]"
+              className="flex flex-wrap items-start gap-3"
             >
-             
-                <Checkbox
-                  checked={answer === opt}
-                  onChange={() => handleSingle(opt)}
-                />
-              
-              <span className="flex-1 break-words">{opt}</span>
+              <Checkbox
+                size={32}
+                checked={answer === opt}
+                onChange={() => handleSingle(opt)}
+              />
+              <span className="flex-1 break-words text-lg xl:text-2xl text-[#16191E]">{opt}</span>
             </label>
           ))}
         </div>
@@ -93,12 +92,17 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({ question, answer, on
       {question.type === 'multiple' && (
         <div className="flex flex-col space-y-2 mt-4">
           {question.options.map(opt => (
-            <label key={opt} className="flex items-center gap-3 text-lg text-[#16191E] border">
+             <label
+              key={opt}
+              className="flex flex-wrap items-start gap-3"
+            >
               <Checkbox
+                size={32}
                 checked={Array.isArray(answer) && answer.includes(opt)}
                 onChange={() => handleMultiple(opt)}
               />
-              {opt}
+              
+              <span className="flex-1 break-words text-lg xl:text-2xl text-[#16191E]">{opt}</span>
             </label>
           ))}
         </div>
@@ -109,7 +113,7 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({ question, answer, on
           type="text"
           value={typeof answer === 'string' ? answer : ''}
           onChange={handleOpen}
-          className="w-full p-2 border rounded border-[#DEE1E5] h-9 mt-4"
+          className="w-full p-2 border rounded border-[#DEE1E5] h-9 xl:h-10 mt-4"
         />
       )}
 
@@ -117,7 +121,7 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({ question, answer, on
         <div className="mt-4">
           {(Array.isArray(answer) ? answer : question.options).map((item, idx) => (
             <div key={item} className="flex items-center mb-2">
-              <span className="flex items-center gap-3 text-lg text-[#16191E] flex-1">{item}</span>
+              <span className="flex items-center gap-3 text-lg xl:text-2xl text-[#16191E] flex-1">{item}</span>
               <div className="flex space-x-1">
 
                 <Button 
@@ -143,26 +147,37 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({ question, answer, on
       )}
 
       {question.type === 'matching' && (
-        <div className="grid grid-cols-1 gap-4 mt-4">
-          {question.leftItems.map(left => (
-            <div key={left} className="flex items-center space-x-2">
-              <span className="flex items-center gap-3 text-lg text-[#16191E] flex-1">{left}</span>
-              <select
-                value={typeof answer === 'object' && !Array.isArray(answer) && answer[left] ? answer[left] : ''}
-                onChange={e => handleMatch(left, e.target.value)}
-                className="py-1 px-4 border rounded border-[#DEE1E5]"
-              >
-                <option value="" className='disabled hidden'>Wybierz</option>
-                {question.rightItems.map(right => (
-                  <option key={right} value={right}>
-                    {right}
-                  </option>
-                ))}
-              </select>
-            </div>
-          ))}
-        </div>
-      )}
+      <div className="grid grid-cols-1 gap-4 mt-4">
+        {question.leftItems.map(left => (
+          <div key={left} className="flex items-center space-x-4">
+            <span className="flex items-center gap-3 text-lg xl:text-2xl text-[#16191E] whitespace-nowrap">
+              {left}
+            </span>
+            <select
+              value={typeof answer === 'object' && !Array.isArray(answer) && answer[left] ? answer[left] : ''}
+              onChange={e => handleMatch(left, e.target.value)}
+              className="py-1 px-4 border rounded border-[#DEE1E5] xl:h-10 w-full"
+              style={{ whiteSpace: 'normal' }}
+            >
+              <option value="" className="disabled hidden">Wybierz</option>
+              {question.rightItems.map(right => (
+                <option
+                  key={right}
+                  value={right}
+                  className="xl:text-lg"
+                  style={{
+                    whiteSpace: 'normal',
+                    wordWrap: 'break-word',
+                  }}
+                >
+                  {right}
+                </option>
+              ))}
+            </select>
+          </div>
+        ))}
+      </div>
+    )}
     </div>
   );
 };

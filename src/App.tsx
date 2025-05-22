@@ -76,7 +76,7 @@ export default function App() {
   };
 
   return (
-    <div className='flex flex-col sm:items-center sm:justify-center py-4 px-4 sm:py-8 sm:px-16 border'>
+    <div className='flex flex-col sm:items-center sm:justify-center py-4 px-4 sm:py-8 sm:px-16'>
       <div className="flex flex-col xl:w-[1280px]">
         <div className="text-2xl font-bold text-[#313642]">
           Pytanie {current + 1} z {total}

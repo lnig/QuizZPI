@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import questions from './data/question.json';
 import { QuestionCard, type AnswerType } from './components/QuestionCard';
 import type {

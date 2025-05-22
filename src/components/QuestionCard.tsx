@@ -1,12 +1,10 @@
 import React, { useEffect } from 'react';
 import type {
-  QuestionType,
   SingleChoiceQuestion,
   MultipleChoiceQuestion,
   OpenQuestion,
   OrderingQuestion,
   MatchingQuestion,
-  BaseQuestion,
 } from '../types/types';
 import Checkbox from './Checkbox';
 import { ChevronDown, ChevronUp } from 'lucide-react';
@@ -54,7 +52,8 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({ question, answer, on
   };
 
   const handleOrdering = (from: number, to: number) => {
-    const currentOrder = Array.isArray(answer) ? answer : question.options;
+    const ordQ = question as OrderingQuestion;
+    const currentOrder = Array.isArray(answer) ? answer : ordQ.options;
     if (to < 0 || to >= currentOrder.length) return;
     const newOrder = [...currentOrder];
     const [moved] = newOrder.splice(from, 1);

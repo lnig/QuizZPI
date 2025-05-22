@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import type {
   SingleChoiceQuestion,
   MultipleChoiceQuestion,
@@ -67,6 +67,27 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({ question, answer, on
     onAnswer(question.id, curr);
   };
 
+  const [shuffledOrdering, setShuffledOrdering] = useState<string[]>([]);
+  const [shuffledMatchingLeft, setShuffledMatchingLeft] = useState<string[]>([]);
+
+  const shuffleArray = <T,>(array: T[]): T[] => {
+    return [...array].sort(() => Math.random() - 0.5);
+  };
+
+  useEffect(() => {
+    if (question.type === 'ordering') {
+      const shuffled = shuffleArray(question.options);
+      setShuffledOrdering(shuffled);
+    
+      if (!Array.isArray(answer)) {
+        onAnswer(question.id, shuffled);
+      }
+    }
+    if (question.type === 'matching') {
+      setShuffledMatchingLeft(shuffleArray(question.leftItems));
+    }
+  }, [question]);
+
   return (
     <div className='min-h-72'>
       <p className="text-xl text-[#313642] mt-3 xl:mt-6 xl:text-3xl">{question.question}</p>
@@ -118,45 +139,42 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({ question, answer, on
       )}
 
       {question.type === 'ordering' && (
-        <div className="mt-4">
-          {(Array.isArray(answer) ? answer : question.options).map((item, idx) => (
-            <div key={item} className="flex items-center mb-2">
-              <span className="flex items-center gap-3 text-lg xl:text-2xl text-[#16191E] flex-1">{item}</span>
-              <div className="flex space-x-1">
-
-                <Button 
+      <div className="mt-4">
+        {(Array.isArray(answer) ? answer : shuffledOrdering).map((item, idx) => (
+          <div key={item} className="flex items-center mb-2">
+            <span className="flex items-center gap-3 text-lg xl:text-2xl text-[#16191E] flex-1">{item}</span>
+            <div className="flex space-x-1">
+              <Button 
                 size='m'
                 type='icon'
                 Icon={ChevronUp}
                 onClick={() => handleOrdering(idx, idx - 1)}
                 disabled={idx === 0}
-                />
-
-                <Button 
+              />
+              <Button 
                 size='m'
                 type='icon'
                 Icon={ChevronDown}
                 onClick={() => handleOrdering(idx, idx + 1)}
-                disabled={idx === (Array.isArray(answer) ? answer.length - 1 : question.options.length - 1)}
-                />
-
-              </div>
+                disabled={idx === (Array.isArray(answer) ? answer.length - 1 : shuffledOrdering.length - 1)}
+              />
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
+      </div>
       )}
 
       {question.type === 'matching' && (
       <div className="grid grid-cols-1 gap-4 mt-4">
-        {question.leftItems.map(left => (
+        {shuffledMatchingLeft.map(left => (
           <div key={left} className="flex items-center space-x-4">
-            <span className="flex items-center gap-3 text-lg xl:text-2xl text-[#16191E] whitespace-nowrap">
+            <span className="flex items-center gap-3 text-lg xl:text-2xl w-80 text-[#16191E] whitespace-nowrap overflow-hidden text-ellipsis">
               {left}
             </span>
             <select
               value={typeof answer === 'object' && !Array.isArray(answer) && answer[left] ? answer[left] : ''}
               onChange={e => handleMatch(left, e.target.value)}
-              className="py-1 px-4 border rounded border-[#DEE1E5] xl:h-10 w-full"
+              className="py-1 px-4 border rounded border-[#DEE1E5] w-48 xl:h-10 xl:w-full"
               style={{ whiteSpace: 'normal' }}
             >
               <option value="" className="disabled hidden">Wybierz</option>

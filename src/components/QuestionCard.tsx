@@ -29,6 +29,11 @@ export interface QuestionCardProps {
 }
 
 export const QuestionCard: React.FC<QuestionCardProps> = ({ question, answer, onAnswer }) => {
+  const [shuffledOrdering, setShuffledOrdering] = useState<string[]>([]);
+  const [shuffledMatchingLeft, setShuffledMatchingLeft] = useState<string[]>([]);
+  const [shuffledSingleOptions, setShuffledSingleOptions] = useState<string[]>([]);
+  const [shuffledMultipleOptions, setShuffledMultipleOptions] = useState<string[]>([]);
+
   useEffect(() => {
     if (question.type === 'ordering' && !Array.isArray(answer)) {
       onAnswer(question.id, question.options);
@@ -67,26 +72,31 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({ question, answer, on
     onAnswer(question.id, curr);
   };
 
-  const [shuffledOrdering, setShuffledOrdering] = useState<string[]>([]);
-  const [shuffledMatchingLeft, setShuffledMatchingLeft] = useState<string[]>([]);
-
   const shuffleArray = <T,>(array: T[]): T[] => {
     return [...array].sort(() => Math.random() - 0.5);
   };
 
   useEffect(() => {
-    if (question.type === 'ordering') {
-      const shuffled = shuffleArray(question.options);
-      setShuffledOrdering(shuffled);
-    
-      if (!Array.isArray(answer)) {
-        onAnswer(question.id, shuffled);
-      }
+  if (question.type === 'ordering') {
+    const shuffled = shuffleArray(question.options);
+    setShuffledOrdering(shuffled);
+    if (!Array.isArray(answer)) {
+      onAnswer(question.id, shuffled);
     }
-    if (question.type === 'matching') {
-      setShuffledMatchingLeft(shuffleArray(question.leftItems));
-    }
-  }, [question]);
+  }
+
+  if (question.type === 'matching') {
+    setShuffledMatchingLeft(shuffleArray(question.leftItems));
+  }
+
+  if (question.type === 'single') {
+    setShuffledSingleOptions(shuffleArray(question.options));
+  }
+
+  if (question.type === 'multiple') {
+    setShuffledMultipleOptions(shuffleArray(question.options));
+  }
+}, [question]);
 
   return (
     <div className='min-h-72'>
@@ -94,7 +104,7 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({ question, answer, on
 
       {question.type === 'single' && (
         <div className="flex flex-col space-y-2 mt-4">
-          {question.options.map(opt => (
+          {shuffledSingleOptions.map(opt => (
             <label
               key={opt}
               className="flex flex-wrap items-start gap-3"
@@ -112,7 +122,7 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({ question, answer, on
 
       {question.type === 'multiple' && (
         <div className="flex flex-col space-y-2 mt-4">
-          {question.options.map(opt => (
+          {shuffledMultipleOptions.map(opt => (
              <label
               key={opt}
               className="flex flex-wrap items-start gap-3"

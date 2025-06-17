@@ -902,9 +902,7 @@
       "Dostrajanie swoich działań powinno odbywać się na podstawie analizy możliwości poprawy swojej wydajności",
       "Wyciąganie wniosków analitycznych dostraja regularne odstępy czasu i możlwości."
     ],
-    "correctAnswer": [
-      "Dostrajanie swoich działań powinno odbywać się na podstawie analizy możliwości poprawy swojej wydajności"
-    ]
+    "correctAnswer": "Dostrajanie swoich działań powinno odbywać się na podstawie analizy możliwości poprawy swojej wydajności"
   },
   {
     "id": "80",
@@ -1011,7 +1009,7 @@
       "Extreme programming (XP), 1999, Kent Beck",
       "PROMPT - Project Resource OrganisaHon Management Planning Technique - stworzona przez Simpact Systems Ltd."
     ],
-    "correctAnswer": ["PROMPT - Project Resource OrganisaHon Management Planning Technique - stworzona przez Simpact Systems Ltd."]
+    "correctAnswer": "PROMPT - Project Resource OrganisaHon Management Planning Technique - stworzona przez Simpact Systems Ltd."
   },
   {
     "id": "89",
@@ -1054,7 +1052,7 @@
       "Trzykrotny wzrost liczby projektów zakończonych sukcesem",
       "Nie było istotnych zmian"
     ],
-    "correctAnswer": ["Podwójny wzrost liczby projektów zakończonych sukcesem"]
+    "correctAnswer": "Podwójny wzrost liczby projektów zakończonych sukcesem"
   },
   {
     "id": "94",

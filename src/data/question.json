@@ -661,7 +661,7 @@
   {
     "id": "63",
     "type": "matching",
-    "question": "Trzy filary SCRUM",
+    "question": "Zaplanuj szokowe przekazanie rezultatów projektu",
     "leftItems": ["Rezultat 1", "Rezultat 2", "Rezultat 3", "Rezultat 4"],
     "rightItems": ["Czerwiec", "Czerwiec", "Czerwiec", "Czerwiec"],
     "correctMap": {
@@ -707,7 +707,7 @@
   {
     "id": "65",
     "type": "matching",
-    "question": "Trzy filary SCRUM",
+    "question": "Zaplanuj szokowe przekazanie rezultatów projektu",
     "leftItems": ["Rezultat 1", "Rezultat 2", "Rezultat 3", "Rezultat 4"],
     "rightItems": ["Marzec", "Kwiecień", "Maj", "Czerwiec"],
     "correctMap": {
@@ -902,7 +902,7 @@
       "Dostrajanie swoich działań powinno odbywać się na podstawie analizy możliwości poprawy swojej wydajności",
       "Wyciąganie wniosków analitycznych dostraja regularne odstępy czasu i możlwości."
     ],
-    "correctAnswers": [
+    "correctAnswer": [
       "Dostrajanie swoich działań powinno odbywać się na podstawie analizy możliwości poprawy swojej wydajności"
     ]
   },
@@ -1011,7 +1011,7 @@
       "Extreme programming (XP), 1999, Kent Beck",
       "PROMPT - Project Resource OrganisaHon Management Planning Technique - stworzona przez Simpact Systems Ltd."
     ],
-    "correctAnswers": ["PROMPT - Project Resource OrganisaHon Management Planning Technique - stworzona przez Simpact Systems Ltd."]
+    "correctAnswer": ["PROMPT - Project Resource OrganisaHon Management Planning Technique - stworzona przez Simpact Systems Ltd."]
   },
   {
     "id": "89",
@@ -1054,7 +1054,7 @@
       "Trzykrotny wzrost liczby projektów zakończonych sukcesem",
       "Nie było istotnych zmian"
     ],
-    "correctAnswers": ["Podwójny wzrost liczby projektów zakończonych sukcesem"]
+    "correctAnswer": ["Podwójny wzrost liczby projektów zakończonych sukcesem"]
   },
   {
     "id": "94",

@@ -98,6 +98,10 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({ question, answer, on
   }
 }, [question]);
 
+  if (!question) {
+    return <div>Ładowanie pytania...</div>;
+  }
+
   return (
     <div className='min-h-72'>
       <p className="text-xl text-[#313642] mt-3 xl:mt-6 xl:text-3xl">{question.question}</p>

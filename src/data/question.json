@@ -247,7 +247,7 @@
   },
   {
     "id": "26",
-    "type": "single",
+    "type": "multiple",
     "question": "Jakiego typu wymagań nie omawialiśmy na wykładzie?",
     "options": [
       "Wymagania funkcjonalne",
@@ -331,7 +331,7 @@
   },
   {
     "id": "33",
-    "type": "single",
+    "type": "multiple",
     "question": "Planowanie odpowiada na pytanie:",
     "options": [
       "Co trzeba będzie zrobić?",
@@ -363,7 +363,7 @@
     "correctAnswers": [
       "Zapas czasu na wypadek nieplanowanych zdarzeń",
       "Waha się w granicach 5%-10% całkowitego czasu trwania wszystkich działań projektowych",
-      "Wpisywana w harmonogram jako fikcyjne działanie ostatnie do wykonania w projekcie.",
+      "Wpisywana w harmonogram jako fikcyjne działanie ostatnie do wykonania w projekcie",
       "Zwykle rezerwę ujawnia się zespołowi projektowemu"
     ]
   },
@@ -444,7 +444,7 @@
   {
     "id": "43",
     "type": "open",
-    "question": "Co się dzieje gdy spotkania organizujemy zbyt rzadko / zbyt często?",
+    "question": "Co się dzieje gdy spotkania organizujemy zbyt rzadko / zbyt często? (skip)",
     "correctAnswers": ["Zbyt rzadko - problemy zespołu nie są komunikowane i długo czekają na rozwiązanie; Zbyt często – tracimy czas na organizację"]
   },
   {
@@ -512,14 +512,14 @@
   },
   {
     "id": "50",
-    "type": "single",
+    "type": "multiple",
     "question": "O którym kanale komunikacji trzeba bardzo pamiętać w codziennej pracy z programistami?",
     "options": ["bezpośrednia rozmowa", "wideokonferencja", "czat (slack/etc)", "email", "forma pisemna", "telefon"],
     "correctAnswers": ["bezpośrednia rozmowa"]
   },
   {
     "id": "51",
-    "type": "single",
+    "type": "multiple",
     "question": "\"Oko pańskie konia tuczy\" - zaznacz prawdziwe odpowiedzi",
     "options": [
       "Obowiązkiem manadżera projektu jest dbanie o prawidłowe odżywianie się członków zespółu",
@@ -575,7 +575,7 @@
   },
   {
     "id": "56",
-    "type": "single",
+    "type": "multiple",
     "question": "Zaznacz NIE pasujące zdanie. 15 minutowy stand-up:",
     "options": [
       "spotkania monitorujące w APM",

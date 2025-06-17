@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import questions from './data/question.json';
 import { QuestionCard, type AnswerType } from './components/QuestionCard';
 import type {
@@ -11,22 +11,39 @@ import type {
 import Button from './components/Button';
 import { ChevronLeft, ChevronRight, Eye } from 'lucide-react';
 
-const total = questions.length;
-
 type QuestionUnion =
   | SingleChoiceQuestion
   | MultipleChoiceQuestion
   | OpenQuestion
   | OrderingQuestion
   | MatchingQuestion;
+
+  const shuffleArray = <T,>(array: T[]): T[] => {
+    const shuffled = [...array];
+    for (let i = shuffled.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+    return shuffled;
+  };
    
 export default function App() {
+  const [shuffledQuestions, setShuffledQuestions] = useState<typeof questions>([]);
   const [current, setCurrent] = useState(0);
   const [answers, setAnswers] = useState<Record<string, AnswerType>>({});
   const [showFeedback, setShowFeedback] = useState(false);
 
-  const q = questions[current] as QuestionUnion;
-  const answer = answers[q.id];
+  useEffect(() => {
+    setShuffledQuestions(shuffleArray(questions));
+  }, []);
+
+  const total = shuffledQuestions.length;
+  const q = shuffledQuestions[current] as QuestionUnion;
+  const answer = answers[q?.id];
+
+  if (shuffledQuestions.length === 0 || !q) {
+    return <div className="flex justify-center items-center h-screen">Ładowanie pytań...</div>;
+  }
 
   const handleAnswer = (id: string, ans: AnswerType) => {
     setAnswers(prev => ({ ...prev, [id]: ans }));
@@ -69,11 +86,31 @@ export default function App() {
       setCurrent(current + 1);
       setShowFeedback(false);
     } else {
+      const newShuffledQuestions = shuffleArray(questions);
+      setShuffledQuestions(newShuffledQuestions);
       setCurrent(0);
       setShowFeedback(false);
       setAnswers({});
     }
   };
+
+  const getCorrectAnswerText = (question: QuestionUnion): string => {
+    switch (question.type) {
+      case 'single':
+        return question.correctAnswer;
+      case 'multiple':
+        return question.correctAnswers.join(', ');
+      case 'open':
+        return question.correctAnswers.join(', ');
+      case 'ordering':
+        return question.options.join(' → ');
+      case 'matching':
+        return question.leftItems.map(left => `${left} → ${question.correctMap[left]}`).join(', ');
+      default:
+        return '';
+    }
+  };
+
 
   return (
     <div className='flex flex-col sm:items-center sm:justify-center py-4 px-4 sm:py-8 sm:px-16'>
@@ -90,12 +127,23 @@ export default function App() {
                   : 'text-red-500 font-bold mt-1 lg:text-2xl'
               }
             >
-              {checkCorrect(q, answer) ? '✔ Poprawna' : '✖ Błędna'}
+             {checkCorrect(q, answer) ? (
+                <span className="text-green-600 font-bold mt-1 lg:text-2xl">
+                  ✔ Poprawna
+                </span>
+              ) : (
+                <div className="text-red-500 font-bold mt-1 lg:text-2xl flex-row">
+                  ✖ Błędna
+                  <div className="text-[#313642] font-normal text-base lg:text-xl mt-1">
+                    Poprawna odpowiedź: <span className="font-semibold">{getCorrectAnswerText(q)}</span>
+                  </div>
+                </div>
+              )}
             </span>
           )}
         </div>
        
-        <QuestionCard question={q} answer={answer} onAnswer={handleAnswer} />
+        {q && <QuestionCard question={q} answer={answer} onAnswer={handleAnswer} />}
 
         <div className="mt-4 flex flex-col sm:flex-row">
           <div className='flex flex-col gap-4 xl:hidden'>
